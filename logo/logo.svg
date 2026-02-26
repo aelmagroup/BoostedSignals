@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#0F2A43"/>
+  <!-- Ligne de signal minimaliste -->
+  <polyline points="40,140 70,80 100,120 130,60 160,100" 
+            fill="none" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
