@@ -1,0 +1,11 @@
+# robots.txt — BoostedSignals
+# https://www.boostedsignals.com/
+
+User-agent: *
+Allow: /
+
+# Disallow common non-content paths (adjust if you add a CMS or admin area)
+Disallow: /cgi-bin/
+
+# Point crawlers to your sitemap
+Sitemap: https://www.boostedsignals.com/sitemap.xml

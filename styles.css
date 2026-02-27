@@ -569,6 +569,115 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .advantages__grid .advantage:nth-child(even) { transition-delay: 0.1s; }
 
+/* ==================== FAQ SECTION ==================== */
+.faq {
+  background: #fff;
+}
+
+.faq__list {
+  max-width: 800px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.faq__item {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.faq__item[open] {
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 20px -6px rgba(14, 165, 233, 0.15);
+}
+
+.faq__question {
+  list-style: none;
+  padding: 1.1rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* Remove default marker in all browsers */
+.faq__question::-webkit-details-marker { display: none; }
+.faq__question::marker { display: none; }
+
+/* Chevron icon via SVG data URI */
+.faq__question::after {
+  content: '';
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.25s ease;
+}
+
+.faq__item[open] .faq__question::after {
+  transform: rotate(180deg);
+}
+
+.faq__item[open] .faq__question {
+  color: #0ea5e9;
+  background: #f0f9ff;
+}
+
+.faq__answer {
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.75;
+}
+
+.faq__answer p + p { margin-top: 0.75rem; }
+
+.faq__answer strong {
+  color: #334155;
+  font-weight: 600;
+}
+
+.faq__answer em {
+  font-style: italic;
+}
+
+/* Inner list inside FAQ answers */
+.faq__list-inner {
+  list-style: none;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq__list-inner li {
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.faq__list-inner li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0ea5e9;
+}
+
 /* ==================== RESPONSIVE ==================== */
 
 /* Tablet */
