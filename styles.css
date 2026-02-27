@@ -514,6 +514,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   min-height: 130px;
 }
 
+/* Form submission status messages */
+#form-status {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  min-height: 1.25em;
+}
+#form-status.form-status--success { color: #16a34a; }
+#form-status.form-status--error   { color: #dc2626; }
+
 /* ==================== FOOTER ==================== */
 .footer {
   background: #0f172a;

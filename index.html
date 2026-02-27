@@ -450,14 +450,8 @@
       </div>
 
       <div class="contact__wrapper contact__wrapper--centered fade-in">
-        <!-- Contact form — uses mailto: for simplicity; replace action/method for a backend service -->
-        <form
-          class="contact__form"
-          action="mailto:contact@boostedsignals.com"
-          method="POST"
-          enctype="text/plain"
-          id="contact-form"
-        >
+        <!-- Contact form — handled by EmailJS (see script.js) -->
+        <form class="contact__form" id="contact-form" novalidate>
           <div class="form__row">
             <div class="form__group">
               <label for="name" class="form__label">Full Name <span aria-hidden="true">*</span></label>
@@ -506,7 +500,9 @@
               required
             ></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <button type="submit" class="btn btn--primary btn--full" id="form-submit">Send Message</button>
+          <!-- Status message shown after submission -->
+          <p id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -530,6 +526,10 @@
   </footer>
 
   <!-- ===================== JAVASCRIPT ===================== -->
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Site scripts (contact form + EmailJS) -->
+  <script src="script.js"></script>
   <script>
     // Auto-update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
